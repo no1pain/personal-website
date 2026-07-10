@@ -10,14 +10,14 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', asChild = false, ...props }, ref) => {
     const buttonClasses = cn(
-      'inline-flex items-center justify-center gap-2 font-medium transition-all duration-fast ease-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 button-press',
+      'inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50',
       {
-        'bg-primary text-primary-foreground hover:bg-primary-700 shadow-sm':
+        'bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm hover:shadow active:scale-[0.98]':
           variant === 'primary',
-        'bg-secondary text-secondary-foreground hover:bg-secondary/80':
+        'bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-[0.98]':
           variant === 'secondary',
-        'hover:bg-accent hover:text-accent-foreground': variant === 'ghost',
-        'border border-input bg-background hover:bg-accent hover:text-accent-foreground':
+        'hover:bg-accent hover:text-accent-foreground active:scale-[0.98]': variant === 'ghost',
+        'border border-input bg-background hover:bg-accent hover:text-accent-foreground active:scale-[0.98]':
           variant === 'outline',
 
         'h-7 px-2.5 text-xs': size === 'xs',

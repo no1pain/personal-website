@@ -12,15 +12,14 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       <a
         ref={ref}
         className={cn(
-          'inline-flex items-center gap-1 text-sm font-medium transition-colors duration-fast ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+          'inline-flex items-center gap-1 text-sm font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:underline decoration-1 underline-offset-4',
           {
             'text-foreground hover:text-primary': variant === 'default',
             'text-muted-foreground hover:text-foreground': variant === 'muted',
-            'text-primary hover:text-primary-700': variant === 'primary',
-            'no-underline': underline === 'none',
-            'underline decoration-1 underline-offset-4 hover:decoration-2':
-              underline === 'hover',
-            'underline decoration-1 underline-offset-4': underline === 'always',
+            'text-primary hover:text-primary/90': variant === 'primary',
+            'no-underline hover:no-underline': underline === 'none',
+            'hover:decoration-2': underline === 'hover',
+            'underline decoration-1': underline === 'always',
           },
           className
         )}

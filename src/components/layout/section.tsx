@@ -3,11 +3,10 @@ import { cn } from '@/lib/utils'
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   size?: 'sm' | 'md' | 'lg' | 'xl'
-  contained?: boolean
 }
 
 export const Section = forwardRef<HTMLElement, SectionProps>(
-  ({ className, size = 'md', contained = false, children, ...props }, ref) => {
+  ({ className, size = 'md', children, ...props }, ref) => {
     return (
       <section
         ref={ref}
@@ -23,11 +22,7 @@ export const Section = forwardRef<HTMLElement, SectionProps>(
         )}
         {...props}
       >
-        {contained ? (
-          <div className="container mx-auto px-4 md:px-6">{children}</div>
-        ) : (
-          children
-        )}
+        {children}
       </section>
     )
   }

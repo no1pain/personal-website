@@ -2,29 +2,17 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Heading } from '@/components/typography/heading'
 import { Text } from '@/components/typography/text'
 import { Divider } from '@/components/ui/divider'
+import { List, ListItem } from '@/components/ui/list'
+import { CaseStudy } from '@/data/case-studies'
 
-export interface EngineeringCaseStudyProps {
-  title: string
-  challenge: string
-  constraints: string[]
-  solution: string
-  tradeoffs: string[]
-  outcome: string
-}
+export interface EngineeringCaseStudyProps extends CaseStudy { }
 
-export function EngineeringCaseStudy({
-  title,
-  challenge,
-  constraints,
-  solution,
-  tradeoffs,
-  outcome,
-}: EngineeringCaseStudyProps) {
+export function EngineeringCaseStudy(props: EngineeringCaseStudyProps) {
   return (
     <Card size="lg" className="h-full">
       <CardHeader>
         <Heading level={3} className="text-2xl">
-          {title}
+          {props.title}
         </Heading>
       </CardHeader>
 
@@ -34,7 +22,7 @@ export function EngineeringCaseStudy({
             Challenge
           </Text>
           <Text size="sm" className="leading-relaxed">
-            {challenge}
+            {props.challenge}
           </Text>
         </div>
 
@@ -44,16 +32,11 @@ export function EngineeringCaseStudy({
           <Text size="xs" weight="semibold" className="text-muted-foreground uppercase tracking-wider">
             Constraints
           </Text>
-          <ul className="space-y-2">
-            {constraints.map((constraint, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-muted-foreground mt-1.5">•</span>
-                <Text size="sm" className="leading-relaxed">
-                  {constraint}
-                </Text>
-              </li>
+          <List>
+            {props.constraints.map((constraint) => (
+              <ListItem key={constraint}>{constraint}</ListItem>
             ))}
-          </ul>
+          </List>
         </div>
 
         <Divider />
@@ -63,7 +46,7 @@ export function EngineeringCaseStudy({
             Solution
           </Text>
           <Text size="sm" className="leading-relaxed">
-            {solution}
+            {props.solution}
           </Text>
         </div>
 
@@ -73,16 +56,11 @@ export function EngineeringCaseStudy({
           <Text size="xs" weight="semibold" className="text-muted-foreground uppercase tracking-wider">
             Trade-offs
           </Text>
-          <ul className="space-y-2">
-            {tradeoffs.map((tradeoff, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-muted-foreground mt-1.5">•</span>
-                <Text size="sm" className="leading-relaxed">
-                  {tradeoff}
-                </Text>
-              </li>
+          <List>
+            {props.tradeoffs.map((tradeoff) => (
+              <ListItem key={tradeoff}>{tradeoff}</ListItem>
             ))}
-          </ul>
+          </List>
         </div>
 
         <Divider />
@@ -92,7 +70,7 @@ export function EngineeringCaseStudy({
             Outcome
           </Text>
           <Text size="sm" className="leading-relaxed">
-            {outcome}
+            {props.outcome}
           </Text>
         </div>
       </CardContent>
