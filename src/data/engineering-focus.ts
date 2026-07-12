@@ -5,8 +5,8 @@ export interface EngineeringFocus {
 
 export const engineeringFocuses: EngineeringFocus[] = [
   {
-    title: 'Frontend Architecture',
-    description: 'Building scalable frontend applications with React and Next.js. Focus on component composition, clear boundaries, and maintainable code structure.',
+    title: 'Frontend Development',
+    description: 'Building frontend applications with React and Next.js. Focus on component composition and maintainable code structure.',
   },
   {
     title: 'Realtime Features',
@@ -17,8 +17,8 @@ export const engineeringFocuses: EngineeringFocus[] = [
     description: 'Using TypeScript to catch errors early, document intent, and refactor with confidence.',
   },
   {
-    title: 'Database Design',
-    description: 'Designing PostgreSQL schemas and implementing Row-Level Security for data protection and access control.',
+    title: 'Database Work',
+    description: 'Working with PostgreSQL databases, implementing Row-Level Security for data protection and access control.',
   },
   {
     title: 'Authentication',

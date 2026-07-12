@@ -22,7 +22,7 @@ export function Hero() {
             <Text size="base" className="text-muted-foreground leading-relaxed">
               Frontend Developer with 2+ years of commercial experience building modern web applications using React, Next.js and TypeScript.
 
-              I enjoy creating fast, scalable and maintainable user experiences with a focus on clean architecture and product quality.            </Text>
+              I enjoy creating fast and maintainable user experiences with a focus on code quality and good practices.            </Text>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">

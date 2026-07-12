@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: 'PostgreSQL & Data Layer',
     challenge:
-      'Applications required secure data access while keeping database structures easy to extend and maintain.',
+      'Applications required secure data access while keeping database structures organized and maintainable.',
 
     constraints: [
       'Different products had different data requirements',
@@ -66,7 +66,7 @@ export const caseStudies: CaseStudy[] = [
     ],
 
     solution:
-      'Worked on PostgreSQL schema design, implemented Row-Level Security (RLS), and optimized queries where needed.',
+      'Worked with PostgreSQL databases, implemented Row-Level Security (RLS), and optimized queries where needed.',
 
     tradeoffs: [
       'RLS policies required careful testing',
