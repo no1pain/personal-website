@@ -6,7 +6,7 @@ import { engineeringFocuses } from '@/data/engineering-focus'
 
 export function EngineeringFocus() {
   return (
-    <section className="py-32" aria-labelledby="engineering-focus-heading">
+    <section className="py-32 fade-in fade-in-delay-2" aria-labelledby="engineering-focus-heading">
       <Container size="full">
         <div className="space-y-20">
           <SectionHeader

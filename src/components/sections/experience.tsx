@@ -5,7 +5,7 @@ import { experiences } from '@/data/experiences'
 
 export function Experience() {
   return (
-    <section className="py-32 bg-muted/30" aria-labelledby="experience-heading">
+    <section className="py-32 bg-muted/30 fade-in fade-in-delay-1" aria-labelledby="experience-heading">
       <Container size="full">
         <div className="space-y-20">
           <SectionHeader

@@ -5,7 +5,7 @@ import { caseStudies } from '@/data/case-studies'
 
 export function CaseStudies() {
   return (
-    <section className="py-32 bg-muted/30" aria-labelledby="case-studies-heading">
+    <section className="py-32 bg-muted/30 fade-in fade-in-delay-3" aria-labelledby="case-studies-heading">
       <Container size="full">
         <div className="space-y-20">
           <SectionHeader
