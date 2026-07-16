@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   description: "Frontend Developer based in Lviv, Ukraine. Building applications with React, Next.js, and TypeScript.",
   keywords: ["Frontend Developer", "React", "Next.js", "TypeScript", "Lviv", "Ukraine"],
   authors: [{ name: "Oleksandr Kazan" }],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
   openGraph: {
     title: "Oleksandr Kazan - Frontend Developer",
     description: "Frontend Developer based in Lviv, Ukraine. Building applications with React, Next.js, and TypeScript.",
